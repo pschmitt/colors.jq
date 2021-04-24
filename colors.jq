@@ -2,7 +2,7 @@ module {
   "name": "colors",
   "description": "jq module to colorize output",
   "homepage": "https://github.com/pschmitt/colors.jq",
-  "license": "GPL3.0",
+  "license": "GPL3",
   "author": "Philipp Schmitt",
   "repository": {
     "type": "git",
