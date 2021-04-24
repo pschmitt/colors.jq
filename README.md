@@ -1,4 +1,4 @@
-# colors.jq
+# 🎨 colors.jq
 
 This [jq](https://stedolan.github.io/jq/) module provides some low-level 
 functions for colorizing the output.
