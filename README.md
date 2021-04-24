@@ -1,7 +1,7 @@
 # colors.jq
 
 This [jq](https://stedolan.github.io/jq/) module provides some low-level 
-functions for colorize the output.
+functions for colorizing the output.
 
 It is intended to be used in conjunction with jq's raw output mode, which does 
 not do any coloring on its own.
