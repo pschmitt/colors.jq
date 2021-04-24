@@ -6,12 +6,12 @@ functions for colorizing the output.
 It is intended to be used in conjunction with jq's raw output mode, which does
 not do any coloring on its own.
 
-# 💠 Installation
+# 🔨 Installation
 
 Grab [./colors.jq](./colors.jq) and put it in jq's
 [include path](https://stedolan.github.io/jq/manual/#Modules)
 
-# 🔨 Usage
+# 🍧 Usage
 
 The following snippet assumes that you cloned this repository in the current
 directory:
