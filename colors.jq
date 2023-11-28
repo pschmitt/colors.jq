@@ -74,6 +74,7 @@ def style:
   "reset":         esc("0"), # alias
   "bold":          esc("1"),
   "dim":           esc("2"),
+  "italic":        esc("3"),
   "underline":     esc("4"),
   "blink":         esc("5"),
   "reverse":       esc("7"),
@@ -125,6 +126,7 @@ def bgwhite(s):        colorize(bgcolor.white        + (s | tostring));
 def reset(s):         colorize(reset.all           + (s | tostring));
 def bold(s):          colorize(style.bold          + (s | tostring));
 def dim(s):           colorize(style.dim           + (s | tostring));
+def italic(s):        colorize(style.italic        + (s | tostring));
 def underline(s):     colorize(style.underline     + (s | tostring));
 def blink(s):         colorize(style.blink         + (s | tostring));
 def reverse(s):       colorize(style.reverse       + (s | tostring));
