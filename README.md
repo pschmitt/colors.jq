@@ -6,12 +6,12 @@ functions for colorizing the output.
 It is intended to be used in conjunction with jq's raw output mode, which does
 not do any coloring on its own.
 
-# 🔨 Installation
+## 🔨 Installation
 
 Grab [./colors.jq](./colors.jq) and put it in jq's
 [include path](https://jqlang.github.io/jq/manual/#modules).
 
-# 🍧 Usage
+## 🍧 Usage
 
 The following snippet assumes that you cloned this repository in the current
 directory:
@@ -23,7 +23,7 @@ echo '{"test": "✅ this should be green, bold and blinking"}' | \
     c::blink(c::bold(c::green(.test)))'
 ```
 
-# 💫 Bonus: ZSH wrapper function
+## 💫 Bonus: ZSH wrapper function
 
 For your convenience here's a little shell (zsh only!) function that alleviates
 the pain of importing the module at every run:
