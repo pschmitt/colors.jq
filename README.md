@@ -1,6 +1,6 @@
 # 🎨 colors.jq
 
-This [jq](https://stedolan.github.io/jq/) module provides some low-level
+This [jq](https://jqlang.github.io/jq/) module provides some low-level
 functions for colorizing the output.
 
 It is intended to be used in conjunction with jq's raw output mode, which does
@@ -9,7 +9,7 @@ not do any coloring on its own.
 # 🔨 Installation
 
 Grab [./colors.jq](./colors.jq) and put it in jq's
-[include path](https://stedolan.github.io/jq/manual/#Modules)
+[include path](https://jqlang.github.io/jq/manual/#modules).
 
 # 🍧 Usage
 
