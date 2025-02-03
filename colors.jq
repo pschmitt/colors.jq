@@ -87,48 +87,64 @@ def colorize(s): (s | tostring) + reset.all;
 
 # Actual functions
 # Colors
-def black(s):        colorize(color.black        + (s | tostring));
-def red(s):          colorize(color.red          + (s | tostring));
-def green(s):        colorize(color.green        + (s | tostring));
-def yellow(s):       colorize(color.yellow       + (s | tostring));
-def blue(s):         colorize(color.blue         + (s | tostring));
-def magenta(s):      colorize(color.magenta      + (s | tostring));
-def cyan(s):         colorize(color.cyan         + (s | tostring));
-def lightgray(s):    colorize(color.lightgray    + (s | tostring));
-def darkgray(s):     colorize(color.darkgray     + (s | tostring));
-def lightred(s):     colorize(color.lightred     + (s | tostring));
-def lightgreen(s):   colorize(color.lightgreen   + (s | tostring));
-def lightyellow(s):  colorize(color.lightyellow  + (s | tostring));
-def lightblue(s):    colorize(color.lightblue    + (s | tostring));
-def lightmagenta(s): colorize(color.lightmagenta + (s | tostring));
-def lightcyan(s):    colorize(color.lightcyan    + (s | tostring));
-def white(s):        colorize(color.white        + (s | tostring));
+def black(s):        colorize(color.black        + s);
+def red(s):          colorize(color.red          + s);
+def green(s):        colorize(color.green        + s);
+def yellow(s):       colorize(color.yellow       + s);
+def blue(s):         colorize(color.blue         + s);
+def magenta(s):      colorize(color.magenta      + s);
+def cyan(s):         colorize(color.cyan         + s);
+def lightgray(s):    colorize(color.lightgray    + s);
+def darkgray(s):     colorize(color.darkgray     + s);
+def lightred(s):     colorize(color.lightred     + s);
+def lightgreen(s):   colorize(color.lightgreen   + s);
+def lightyellow(s):  colorize(color.lightyellow  + s);
+def lightblue(s):    colorize(color.lightblue    + s);
+def lightmagenta(s): colorize(color.lightmagenta + s);
+def lightcyan(s):    colorize(color.lightcyan    + s);
+def white(s):        colorize(color.white        + s);
 
 # BG Colors
-def bgblack(s):        colorize(bgcolor.black        + (s | tostring));
-def bgred(s):          colorize(bgcolor.red          + (s | tostring));
-def bggreen(s):        colorize(bgcolor.green        + (s | tostring));
-def bgyellow(s):       colorize(bgcolor.yellow       + (s | tostring));
-def bgblue(s):         colorize(bgcolor.blue         + (s | tostring));
-def bgmagenta(s):      colorize(bgcolor.magenta      + (s | tostring));
-def bgcyan(s):         colorize(bgcolor.cyan         + (s | tostring));
-def bglightgray(s):    colorize(bgcolor.lightgray    + (s | tostring));
-def bgdarkgray(s):     colorize(bgcolor.darkgray     + (s | tostring));
-def bglightred(s):     colorize(bgcolor.lightred     + (s | tostring));
-def bglightgreen(s):   colorize(bgcolor.lightgreen   + (s | tostring));
-def bglightyellow(s):  colorize(bgcolor.lightyellow  + (s | tostring));
-def bglightblue(s):    colorize(bgcolor.lightblue    + (s | tostring));
-def bglightmagenta(s): colorize(bgcolor.lightmagenta + (s | tostring));
-def bglightcyan(s):    colorize(bgcolor.lightcyan    + (s | tostring));
-def bgwhite(s):        colorize(bgcolor.white        + (s | tostring));
+def bgblack(s):        colorize(bgcolor.black        + s);
+def bgred(s):          colorize(bgcolor.red          + s);
+def bggreen(s):        colorize(bgcolor.green        + s);
+def bgyellow(s):       colorize(bgcolor.yellow       + s);
+def bgblue(s):         colorize(bgcolor.blue         + s);
+def bgmagenta(s):      colorize(bgcolor.magenta      + s);
+def bgcyan(s):         colorize(bgcolor.cyan         + s);
+def bglightgray(s):    colorize(bgcolor.lightgray    + s);
+def bgdarkgray(s):     colorize(bgcolor.darkgray     + s);
+def bglightred(s):     colorize(bgcolor.lightred     + s);
+def bglightgreen(s):   colorize(bgcolor.lightgreen   + s);
+def bglightyellow(s):  colorize(bgcolor.lightyellow  + s);
+def bglightblue(s):    colorize(bgcolor.lightblue    + s);
+def bglightmagenta(s): colorize(bgcolor.lightmagenta + s);
+def bglightcyan(s):    colorize(bgcolor.lightcyan    + s);
+def bgwhite(s):        colorize(bgcolor.white        + s);
 
 # Styles
-def reset(s):         colorize(reset.all           + (s | tostring));
-def bold(s):          colorize(style.bold          + (s | tostring));
-def dim(s):           colorize(style.dim           + (s | tostring));
-def italic(s):        colorize(style.italic        + (s | tostring));
-def underline(s):     colorize(style.underline     + (s | tostring));
-def blink(s):         colorize(style.blink         + (s | tostring));
-def reverse(s):       colorize(style.reverse       + (s | tostring));
-def hidden(s):        colorize(style.hidden        + (s | tostring));
-def strikethrough(s): colorize(style.strikethrough + (s | tostring));
+def reset(s):         colorize(reset.all           + s);
+def bold(s):          colorize(style.bold          + s);
+def dim(s):           colorize(style.dim           + s);
+def italic(s):        colorize(style.italic        + s);
+def underline(s):     colorize(style.underline     + s);
+def blink(s):         colorize(style.blink         + s);
+def reverse(s):       colorize(style.reverse       + s);
+def hidden(s):        colorize(style.hidden        + s);
+def strikethrough(s): colorize(style.strikethrough + s);
+
+# Styles + colors
+def styled_color(style_code; color_code; s):
+  colorize(style_code + color_code + s);
+
+def bold_color(color_code; s):
+  styled_color(style.bold; color_code; s);
+
+def bold_red(s):     bold_color(color.red    ; s);
+def bold_blue(s):    bold_color(color.blue   ; s);
+def bold_green(s):   bold_color(color.green  ; s);
+def bold_yellow(s):  bold_color(color.yellow ; s);
+def bold_magenta(s): bold_color(color.magenta; s);
+def bold_cyan(s):    bold_color(color.cyan   ; s);
+def bold_white(s):   bold_color(color.white  ; s);
+def bold_black(s):   bold_color(color.black  ; s);
